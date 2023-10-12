@@ -23,6 +23,13 @@ namespace VendasWebMVC.Controllers
             return View();
         }
 
+        public IActionResult Sobre()
+        {
+            ViewData["Message"] = "Projeto sendo construído para estudar Asp.Net Core - MVC";
+
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

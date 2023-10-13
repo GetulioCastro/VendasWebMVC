@@ -20,8 +20,27 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    name: "home.index",
+    pattern: "",
+    defaults: new { controller = "Home", Action = "Index" });
+
+app.MapControllerRoute(
+    name: "home.Privacidade",
+    pattern: "Privacidade",
+    defaults: new { controller = "Home", Action = "Privacidade" });
+
+app.MapControllerRoute(
+    name: "home.Sobre",
+    pattern: "Sobre",
+    defaults: new { controller = "Home", Action = "Sobre" });
+
+app.MapControllerRoute(
+    name: "departamentos.index",
+    pattern: "departamentos",
+    defaults: new { controller = "Departamentos", Action = "Index" });
 
 app.Run();

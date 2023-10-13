@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using VendasWebMVC.Models;
+using VendasWebMVC.Models.ViewModels;
 
 namespace VendasWebMVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        public readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -18,15 +18,16 @@ namespace VendasWebMVC.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        public IActionResult Departamento() => View(Departamento);
 
         public IActionResult Sobre()
         {
             ViewData["Message"] = "Projeto sendo construído para estudar Asp.Net Core - MVC";
 
+            return View();
+        }
+        public IActionResult Privacidade()
+        {
             return View();
         }
 

@@ -18,14 +18,6 @@ namespace VendasWebMVC.Controllers
             return View();
         }
 
-        public IActionResult Departamento() => View(Departamento);
-
-        public IActionResult Sobre()
-        {
-            ViewData["Message"] = "Projeto sendo construído para estudar Asp.Net Core - MVC";
-
-            return View();
-        }
         public IActionResult Privacidade()
         {
             return View();

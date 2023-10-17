@@ -39,11 +39,6 @@ app.MapControllerRoute(
     defaults: new { controller = "Home", Action = "Privacidade" });
 
 app.MapControllerRoute(
-    name: "home.Sobre",
-    pattern: "Sobre",
-    defaults: new { controller = "Home", Action = "Sobre" });
-
-app.MapControllerRoute(
     name: "departamentos.index",
     pattern: "departamentos",
     defaults: new { controller = "Departamentos", Action = "Index" });
